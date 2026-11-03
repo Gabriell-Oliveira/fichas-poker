@@ -63,3 +63,6 @@ js/
 
 ## Limitações
 - Sem pote lateral (*side pot*) para all-ins com valores diferentes: quem opera o aparelho decide o vencedor e o valor.
+
+## Link do Site
+- https://gabriell-oliveira.github.io/fichas-poker/
