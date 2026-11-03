@@ -1,0 +1,10 @@
+{
+  "name": "fichas-poker",
+  "version": "1.0.0",
+  "description": "Controle de fichas de poker para jogar presencialmente com amigos",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}

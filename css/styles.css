@@ -1,0 +1,55 @@
+:root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--tx); font: 16px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+#app { max-width: 720px; margin: 0 auto; padding: 14px 14px 40px; }
+h1 { font-size: 22px; margin: 6px 0; }
+h2 { font-size: 16px; margin: 0 0 8px; }
+.mut, small { color: var(--mut); }
+
+/* Componentes */
+.card { background: var(--card); border: 1px solid var(--bd); border-radius: 14px; padding: 12px; margin: 10px 0; }
+label { display: block; font-size: 13px; color: var(--mut); }
+input[type=text], input[type=number] { width: 100%; margin: 4px 0 10px; padding: 11px; font-size: 16px; border-radius: 10px; border: 1px solid var(--bd); background: var(--bg); color: var(--tx); }
+.btn { display: block; width: 100%; padding: 12px; border: 0; border-radius: 10px; background: var(--ac); color: var(--acx); font: 700 16px system-ui; cursor: pointer; }
+.btn.sec { background: transparent; color: var(--tx); border: 1px solid var(--bd); }
+.btn.bad { background: transparent; color: var(--bad); border: 1px solid var(--bad); }
+.btn:disabled { opacity: .4; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row > * { flex: 1 1 90px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tag { font-size: 12px; padding: 2px 8px; border-radius: 99px; border: 1px solid var(--bd); color: var(--mut); white-space: nowrap; }
+.pill { display: inline-flex; gap: 6px; align-items: center; margin: 3px; padding: 6px 10px; border-radius: 99px; border: 1px solid var(--bd); }
+.pill button { background: none; border: 0; color: var(--bad); font-size: 16px; cursor: pointer; }
+
+/* Mesa */
+.pot { text-align: center; }
+.pot b { font-size: 30px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.pl { text-align: left; color: var(--tx); font: inherit; cursor: pointer; margin: 0; width: 100%; }
+.pl.fd { opacity: .45; }
+.draft { font: 800 22px system-ui; text-align: center; margin: 6px 0; }
+
+/* Fichas */
+.stk { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; align-items: flex-end; min-height: 48px; }
+.col { text-align: center; }
+.col small { font-size: 11px; display: block; }
+.chip { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 3px dashed; font: 800 12px system-ui; }
+.sm .chip { width: 26px; height: 26px; font-size: 9px; border-width: 2px; }
+.sm .stk { min-height: 0; }
+.pk { background: none; border: 0; padding: 2px; cursor: pointer; }
+
+/* Sobreposições */
+.ov { position: fixed; inset: 0; background: #000a; display: grid; place-items: center; padding: 16px; z-index: 9; overflow: auto; }
+.ov .card { width: 100%; max-width: 440px; margin: 0; }
+.opt { display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--bd); }
+.opt input { width: 22px; height: 22px; margin: 0; }
+#toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--tx); color: var(--bg); padding: 10px 16px; border-radius: 10px; opacity: 0; pointer-events: none; transition: .2s; max-width: 90%; text-align: center; z-index: 10; }
+#toast.on { opacity: 1; }
+
+/* Rodadas */
+.dots { display: inline-flex; gap: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ac); }
+.dot.done { background: var(--ac); opacity: .5; }
+.dot.now { background: var(--ac); }
+.notice { border-color: var(--ac); text-align: center; }

@@ -1,0 +1,15 @@
+# Dependências e builds
+node_modules/
+dist/
+.vercel/
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Ambiente e logs
+.env
+.env.*
+*.log

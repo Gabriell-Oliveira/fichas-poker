@@ -1,0 +1,18 @@
+/* Variáveis de tema. Para mudar cores do app, edite só este arquivo. */
+:root {
+  --bg: #e6f2ea; --card: #fff; --tx: #12301f; --mut: #4d6b5b;
+  --bd: #b9d6c4; --ac: #a87400; --acx: #fff; --bad: #b3261e;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d3326; --card: #144a37; --tx: #f4f1e8; --mut: #a5c8b6;
+    --bd: #2a6f55; --ac: #e9c46a; --acx: #1b1b1b; --bad: #ff8a80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d3326; --card: #144a37; --tx: #f4f1e8; --mut: #a5c8b6;
+  --bd: #2a6f55; --ac: #e9c46a; --acx: #1b1b1b; --bad: #ff8a80;
+  color-scheme: dark;
+}
